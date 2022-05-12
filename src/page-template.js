@@ -23,7 +23,7 @@ const generateEmployees = templateData => {
     };
 
     html += `
-    <div class="col-md-4 col-12">
+    <div class="col-md-4 col-12 my-3">
     <div class="card">
       <div class="em-heading bg-primary text-white p-3">
         <h4>${data.getName()}</h4>

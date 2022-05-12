@@ -6,19 +6,18 @@ a{
     text-decoration: none;
 }
 
-.em-heading span{
-    font-size: 20px;
-    margin-left: 10px;
-    font-weight: 600;
+.card{
+    box-shadow: 5px 5px 10px #00000090;
 }
 
-.card{
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
+.em-heading span{
+    margin-left: 10px;
+    font-size: 20px;
 }
 
 .card-info section{
     background-color: #fff;
-    border: 1px solid rgb(215 215 215);
+    border: 1px solid #00000021;
     padding: 10px;
 }
 

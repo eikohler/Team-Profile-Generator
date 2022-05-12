@@ -216,3 +216,10 @@ promptManager().then(promptNext)
   .catch(err => {
     console.log(err);
   });
+
+
+
+// promptManager().then(promptNext)
+//   .then(profileData => {
+//     profileData.forEach(data => console.log(data));
+//   });

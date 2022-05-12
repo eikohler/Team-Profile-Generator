@@ -1,5 +1,50 @@
-const generateEmployees = data => {
+const Manager = require('../lib/Manager');
+const Engineer = require('../lib/Engineer');
+const Intern = require('../lib/Intern');
 
+const generateEmployees = templateData => {
+  let html = '';
+  templateData.forEach(data => {
+    let icon = '';
+    let special = '';
+    switch(data.getRole()){
+      case "Manager":
+        icon = '<i class="fa fa-coffee" aria-hidden="true"></i>';
+        special = 'Office number: ' + data.getOfficeNum();
+        break;
+      case "Engineer":
+        icon = '<i class="fa fa-wrench" aria-hidden="true"></i>';
+        special = `GitHub: <a href="https://github.com/${data.getGithub()}" target="_blank">${data.getGithub()}</a>`;
+        break;
+      case "Intern":
+        icon = '<i class="fa fa-graduation-cap" aria-hidden="true"></i>';
+        special = 'School: ' + data.getSchool();
+        break;
+    };
+
+    html += `
+    <div class="col-md-4 col-12">
+    <div class="card">
+      <div class="em-heading bg-primary text-white p-3">
+        <h4>${data.getName()}</h4>
+        ${icon}<span>${data.getRole()}</span>
+      </div>
+      <div class="bg-light px-3 py-4 card-info">
+        <section>
+          <p>ID: ${data.getID()}</p>
+        </section>
+        <section>
+          <p>Email: <a href="mailto:${data.getEmail()}">${data.getEmail()}</a></p>
+        </section>
+        <section>
+          <p>${special}</p>
+        </section>
+      </div>
+    </div>
+  </div>
+    `;
+  });
+  return html;
 };
 
 module.exports = templateData => {
@@ -23,7 +68,7 @@ module.exports = templateData => {
       </header>
       <main class="container p-5">
         <section class="row justify-content-center">
-          
+          ${generateEmployees(templateData)}
         </section>
       </main>
     </body>

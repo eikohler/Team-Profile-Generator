@@ -1,0 +1,26 @@
+header{
+    padding: 3em 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.card{
+    box-shadow: 5px 5px 10px #00000090;
+}
+
+.em-heading span{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.card-info section{
+    background-color: #fff;
+    border: 1px solid #00000021;
+    padding: 10px;
+}
+
+.card-info section p{
+    margin-bottom: 0px;
+}
